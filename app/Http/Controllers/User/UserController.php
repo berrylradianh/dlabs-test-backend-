@@ -80,6 +80,11 @@ class UserController extends Controller
         try {
             $user = $this->userAction->updateUser($id, $request->validated());
             return ResponseHelper::nonPagedResponse($user, HttpResponse::HTTP_OK);
+        }catch (ModelNotFoundException $e) {
+            return ResponseHelper::errorResponse(
+                HttpResponse::HTTP_NOT_FOUND,
+                'User not found'
+            );
         } catch (\Exception $e) {
             return ResponseHelper::errorResponse(HttpResponse::HTTP_BAD_REQUEST, $e->getMessage());
         }

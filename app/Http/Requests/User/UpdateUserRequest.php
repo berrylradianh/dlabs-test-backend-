@@ -18,6 +18,7 @@ class UpdateUserRequest extends FormRequest
             'name' => 'sometimes|string',
             'email' => 'sometimes|email',
             'age' => 'sometimes|integer',
+            'password' => 'sometimes|string'
         ];
     }
 
