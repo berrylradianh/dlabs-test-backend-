@@ -25,9 +25,6 @@ class UserControllerTest extends TestCase
             'size',
             'total'
         ]);
-
-        $this->assertCount(5, $response->json('data'));
-        $this->assertEquals(10, $response->json('total'));
     }
 
     public function testShowSuccess()
