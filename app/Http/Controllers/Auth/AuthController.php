@@ -56,7 +56,7 @@ class AuthController extends Controller
 
             return ResponseHelper::nonPagedResponse(['message' => 'User logged out successfully'],  HttpResponse::HTTP_OK);
         } catch (\Exception $e) {
-            return ResponseHelper::errorResponse(HttpResponse::HTTP_INTERNAL_SERVER_ERROR, 'Failed to log out: ' . $e->getMessage());
+            return ResponseHelper::errorResponse(HttpResponse::HTTP_INTERNAL_SERVER_ERROR, $e->getMessage());
         }
     }
 }
