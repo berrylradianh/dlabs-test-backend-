@@ -1,7 +1,7 @@
 # DLabs Test Backend
 
 ## About
-**DLabs Test Backend** is a backend system designed for Auth and user. Built with the Laravel framework, this project offers a flexible API that supports managing outlets and vouchers, ensuring scalability and ease of use.
+**DLabs Test Backend** is a backend system designed for Auth and user.
 
 
 ## Requirements
