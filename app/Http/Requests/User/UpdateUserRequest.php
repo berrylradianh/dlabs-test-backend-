@@ -2,11 +2,14 @@
 
 namespace App\Http\Requests\User;
 
+use App\Traits\ValidationTrait;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\DB;
 
 class UpdateUserRequest extends FormRequest
 {
+    use ValidationTrait;
+
     public function authorize(): bool
     {
         return true;
